@@ -1,0 +1,29 @@
+How To Center Images
+
+Step 1) Add HTML:
+Example
+<img src="paris.jpg" alt="Paris" class="center">
+
+Step 2) Add CSS:
+To center an image, set left and right margin to auto and make it into a block element:
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+Note that it cannot be centered if the width is set to 100% (full-width).
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+
+
+
+
