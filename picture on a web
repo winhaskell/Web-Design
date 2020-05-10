@@ -3,6 +3,19 @@ How to center a picture on a web page using HTML
 
 https://www.computerhope.com/issues/ch001613.htm
 
+picture on a web page using HTML
+https://www.computerhope.com/issues/ch001613.htm
+
+<p style="text-align:center;"><img src="logo.gif" alt="Logo"></p>
+
+<img src="logo.gif" class="centerImage" alt="CH Logo" height="120" width="350">
+
+
+<center><img src="logo.jpg" alt="what image shows" height="150" width="200"></center>
+
+
+
+
 
 
 
