@@ -1,0 +1,10 @@
+Copyright © Year Update
+
+Year Update javascriot code
+<script>document.write(new Date().getFullYear())</script>
+
+i.e.
+2022 - <script>document.write(new Date().getFullYear())</script>
+
+
+
