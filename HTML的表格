@@ -1,0 +1,271 @@
+HTML的空格
+
+HTML 中的表格是什么
+表格是一种以行和列表示数据的方式。我们还可以将表格定义为一组行，每行包含一组单元格。
+
+HTML 表格允许 Web 开发人员将数据排列成行和列。使用表格，你可以将文本、图像、链接、其他表格等数据排列到单元格的行和列中。
+
+你可以使用元素在 HTML 中创建表格。可以使用三个主要元素来声明表格，即：
+
+<table> - 这是主容器
+<tr> - 代表行
+<td> - 用于创建数据单元格
+
+<table>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+  <tr>
+    <td>Cell 4</td>
+    <td>Cell 5</td>
+    <td>Cell 6</td>
+  </tr>
+</table>
+
+
+
+现在我们已经了解了基本的 HTML 表格结构，是时候创建一个更有用的具有高级功能的表格了——就像我们可以在 <table> 中使用的其他元素一样。
+
+如何在 HTML 中添加表格表头
+你可以使用 <th> 标签添加表格表头。此标记将替换用于表示实际数据单元格的 <td> 标记。
+
+通常，你会将顶行作为表格表头，如下所示。但是你也可以在任何行中使用 <th> 元素。<th> 标签中定义的表头默认居中加粗。
+
+<th> 示例：
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+   <td>TechMania</td>
+   <td>Maria</td>
+   <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial</td>
+    <td>Francisco</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
+
+
+如何在 HTML 中使用 scope 属性
+scope 属性定义了一种将表中的表头单元格和数据单元格关联起来的方法。
+
+scope 属性标识单元格是列的表头还是行的表头。
+
+此属性只能在表头单元格中声明，并采用值 “col”、“row”、“colgroup” 和 “rowgroup”。值 “col” 和 “row” 表示表头单元格（分别）为其所在的列或行中的其余单元格提供表头信息。
+
+scope 属性语法
+<th scope="value">
+代码示例
+
+<table>
+  <tr>
+    <th scope="row">Day</th>
+    <th>Today</th>
+    <th>Tomorrow</th>
+    <th>Thursday</th>
+  </tr>
+
+  <tr>
+    <th>Condition</th>
+    <td>Sunny</td>
+    <td>Mostly sunny</td>
+    <td>Partly cloudy</td>
+  </tr>
+
+  <tr>
+    <th>Temperature</th>
+    <td>19°C</td>
+    <td>17°C</td>
+    <td>12°C</td>
+  </tr>
+</table>
+
+
+
+
+
+如何向表格添加说明
+
+这是使表格更具可读性的另一个属性。说明的主要用途是提供有关表格中显示的数据的描述。
+
+要插入说明，请在表格的开始标记之后使用 <caption> 元素。
+
+语法
+
+<table>
+  <caption></caption>
+  <tr> </tr>
+</table>
+代码示例
+
+<table>
+  <caption>Fuel consumption of cars during the drive tests</caption>
+  <tr>
+    <th scope="col">Car</th>
+    <th>January</th>
+    <th>February</th>
+    <th>March</th>
+  </tr>
+  <tr>
+    <th>G-Wagon</th>
+    <td>30 gal</td>
+    <td>82 gal</td>
+    <td>70 gal</td>
+  </tr>
+</table>
+
+
+
+如何在 HTML 表格中使用单元格跨度
+
+你可能已经看到单元格跨越表格中的两个或多个列或行，这叫作单元格跨度。
+
+你可以使用 <td> 和 <tr> 这两个属性创建跨越行和列的单元格。你需要另外两个单元格属性来完成这项工作，colspan 用于水平跨度，rowspan 用于垂直跨度。
+
+你可以为这些属性分配一个大于零的整数值，表示你希望它跨越的单元格数。
+
+代码示例：
+<table>
+  <tr>
+    <th></th>
+    <th>Day 1</th>
+    <th>Day 2</th>
+    <th>Day 3</th>
+    <th>Day 4</th>
+  </tr>
+  <tr>
+    <th>Mike (injured)</th>
+    <td colspan="3">0 km</td>
+    <td>4 km</td>
+  </tr>
+  <tr>
+    <th>Susan</th>
+    <td>23 km</td>
+    <td>18 km</td>
+    <td>19 km</td>
+    <td>15 km</td>
+  </tr>
+</table>
+
+请注意，在上面的示例中，我们有一个跨 3 个单元格的单元格，如 colspan 所示。同样的事情发生在 rowspan 的情况下，但在这种情况下，它将是垂直跨越。
+
+代码示例：
+<table>
+  <tr>
+    <th></th>
+    <th>Basic</th>
+    <th>Full</th>
+  </tr>
+  <tr>
+    <th>Setup</th>
+    <td rowspan="2">Free!</td>
+    <td>$49.99</td>
+  </tr>
+  <tr>
+    <th>First year</th>
+    <td>$19.99</td>
+  </tr>
+  <tr>
+    <th>Second year</th>
+    <td>$9.99</td>
+    <td>$29.99</td>
+  </tr>
+</table>
+
+使用 colspan 和 rowspan 时，请确保正确声明它们以避免重叠单元格。
+
+如何在 HTML 表格中添加表格表头、正文和页脚，就像具有三个主要部分的网站一样，表格也是如此。
+
+我们可以将表格分为三个主要部分：表头、正文和页脚。
+
+<thead> – 用于为表格创建单独的表头
+<tbody> — 表示表的主体
+<tfoot> – 为表格创建一个单独的页脚
+
+为了更好地理解这是如何工作的，让我们看一个使用两组数据的示例。该表有一个带有行的表头、一个带有数据摘要的页脚以及一个包含表主体的行块：
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2">Anthony</th>
+      <th colspan="2">Lione</th>
+    </tr>
+    <tr>
+      <th scope="col">Date</th>
+      <th>Income</th>
+      <th>Outcome</th>
+      <th>Income</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>07/15</th>
+      <td>$200,00</td>
+      <td>$50,00</td>
+      <td>$0</td>
+      <td>$0</td>
+    </tr>
+    <tr>
+      <th>07/28</th>
+      <td>$0,00</td>
+      <td>$100,00</td>
+      <td>$100,00</td>
+      <td>$0,00</td>
+    </tr>
+  </tbody>
+    
+  <tfoot>
+    <tr>
+      <th>Balance</th>
+      <td colspan="2">$20,00</td>
+      <td colspan="2">$10,00</td>
+    </tr>
+  </tfoot>
+</table>
+
+一张表可以有多个主体。在这种情况下，每个主体将相关的行分组在一起。
+
+如何使用 CSS 为 HTML 表格设置样式
+
+你看到的大多数表格使用不同的颜色和样式方法来区分它们的功能和重要值。
+
+毕竟，谁会想要查看仅被一行分割的数据？要为表格添加样式，你需要创建一个 .css 文件，你将在主 HTML 文件中链接到该文件。
+
+在上面的代码中，我们使用本文中介绍的一些结构元素创建了一个简单的表格。
+
+我们还继续添加了一些样式，使我们的表格更具吸引力。该表还有一个固定的表头，因此你可以滚动浏览大量数据并仍然看到特定列的表头。
+
+
+什么时候在 HTML 中使用表格？
+很多时候你可能希望在 HTML 中使用表格。
+当你想要比较和对比具有共享特征的数据时，可以使用表格。
+如果你想概述数值数据，也可以使用一个表格。表格可以帮助读者快速找到以清晰方式排列的特定信息。
+
+
+总结
+
+表格是展示数据的好方法，你可以使用基本的 HTML 元素（例如 <table>、<tr>、<td>）来创建它们。
+你还可以添加一些样式，使它们看起来不错并清晰地呈现数据。
+
+
+
+
+
+
+
+
+
+
+
