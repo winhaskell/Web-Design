@@ -1,0 +1,22 @@
+Bootstrap
+https://getbootstrap.com/
+
+Build and extend in real-time with CSS variables
+
+Bootstrap 5 is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. 
+We provide dozens of variables for colors, font styles, and more at a :root level for use anywhere. 
+On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.
+
+
+Personalize it with Bootstrap Icons
+
+Bootstrap Icons is an open source SVG icon library featuring over 1,800 glyphs, with more added every release. 
+They're designed to work in any project, whether you use Bootstrap itself or not. 
+Use them as SVGs or icon fonts—both options give you vector scaling and easy customization via CSS.
+
+
+Make it yours with official Bootstrap Themes
+
+Take Bootstrap to the next level with premium themes from the official Bootstrap Themes marketplace. 
+Themes are built on Bootstrap as their own extended frameworks, rich with new components and plugins, documentation, and powerful build tools.
+
