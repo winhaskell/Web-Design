@@ -1,0 +1,29 @@
+兼容较新的 jQuery 版本
+
+文件点击 custom.js
+
+原来代码
+$imgs.load(function(){
+    $container.isotope('layout');
+});
+
+在 jQuery 3.x 中可能出现：
+TypeError: $imgs.load is not a function
+
+改成 .on('load', ...) 就可以避免这个旧 API 的兼容性问题。
+
+修改为：
+$imgs.on('load', function(){
+    $container.isotope('layout');
+});
+
+
+Tips:
+不要为了修复一次 jQuery 报错而升级整个 jQuery。
+先确认实际版本和 Console 的完整错误信息，再决定是否需要修改。这样更稳妥
+
+
+优化建议:
+首页轮播图片	WebP，尽量 200–400 KB
+其他展示图片	尽量 100–300 KB
+
