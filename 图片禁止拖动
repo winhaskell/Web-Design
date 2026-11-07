@@ -1,0 +1,40 @@
+全站图片禁止拖动
+
+不需要逐张修改 HTML，也不需要一个个给 <img> 添加属性。
+
+在网站 HTML 文件的最后，找到 </body>，在它前面加入：
+
+<script>
+document.addEventListener('dragstart', function(event) {
+    if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+    }
+});
+</script>
+
+这样网站中所有图片，包括以后新增的图片，都不能通过鼠标拖动。
+
+
+
+也可以使用 HTML 属性
+如果只想禁止某张图片拖动，可以这样写：
+
+<img src="imgname.jpg"
+     class="img-responsive"
+     alt="Founder"
+     draggable="false">
+
+其中：
+draggable="false"
+
+就是禁止拖动。
+
+
+
+
+
+
+
+
+
+
