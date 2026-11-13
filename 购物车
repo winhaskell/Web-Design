@@ -1,0 +1,62 @@
+购物车
+
+❌ 原代码（会清空购物车）：
+// 模拟清空购物车并存储
+        cart = [];
+        updateCart();
+        saveCartToStorage();
+
+
+✅ 修改后（保留购物车明细）：
+// 💡 修改这里：把清空购物车的代码注释掉或删除
+        // cart = [];
+        // updateCart();
+        // saveCartToStorage();
+
+
+修改后的完整 handleCheckout 函数参考
+你可以直接用以下这段修改好的代码替换你文件中原来的 handleCheckout 函数。
+这样用户点击结算、生成订单并弹窗提示后，购物车里的菜品依然会完好无损地保留在页面上：
+
+// Handle Checkout
+async function handleCheckout() {
+    if (cart.length === 0) {
+        showToast('error', '我的点餐是空的');
+        return;
+    }
+    
+    try {
+        // Prepare order data
+        const orderData = {
+            items: cart.map(item => ({
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                quantity: item.quantity
+            })),
+            total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+            orderTime: new Date().toISOString(),
+            status: 'pending'
+        };
+        
+        // ❌ 注意：这里不要执行 cart = [] 和 清空 Storage 的操作
+        // 保持购物车数据完整保留，方便客户随时查看已选明细
+        
+        // Close cart modal
+
+        const cartModal = document.getElementById('cartModal');
+        if (cartModal) {
+            cartModal.classList.add('hidden');
+            cartModal.classList.remove('flex');
+        }
+        
+        // Show success modal
+        showSuccessModal();
+        
+    } catch (error) {
+        console.error('Order submission error:', error);
+        showToast('error', '订单提交失败，请重试');
+    }
+}
+
+
