@@ -31,3 +31,43 @@
             </button>
         </div>
     </div>
+
+
+
+
+
+
+
+修改
+
+<div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-8 text-center shadow-xl">
+            <!-- 1. 成功图标 -->
+            <div class="text-4xl mb-3">✅</div>
+            
+            <!-- 2. 主标题 -->
+            <h3 class="text-2xl font-bold mb-3 text-gray-800">订单已成功生成！</h3>
+            
+            <!-- 3. 引导提示语 -->
+            <p class="text-gray-600 text-sm mb-4">
+                请按照订单明细，拨打电话或发送微信联系我们：
+            </p>
+            
+            <!-- 4. 核心电话号码 -->
+            <div class="mb-4">
+                <span class="inline-flex items-center text-pink-500 font-bold text-lg">
+                    <span class="mr-1.5">☎️</span> +86 130 1696 7587
+                </span>
+            </div>
+            
+            <!-- 5. 次要说明文字：改用 mb-4 优化间距，颜色改用 text-gray-500 提升清晰度和温润感 -->
+            <p class="text-gray-500 text-xs mb-4">
+                当我们收到您的订单，会尽快为您准备美食...
+            </p>
+            
+            <!-- 6. 确定按钮（自适应宽度、居中） -->
+            <button id="closeSuccessModal" class="bg-primary text-white px-10 py-3 rounded-lg font-bold hover:bg-opacity-90 transition shadow-md">
+                😋 确定
+            </button>
+        </div>
+    </div>
