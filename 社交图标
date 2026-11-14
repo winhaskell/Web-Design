@@ -1,0 +1,43 @@
+社交图标
+
+<div class="flex items-center space-x-3">
+    <!-- 微信 -->
+    <a href="https://qq.com" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition" title="微信">
+        <i class="fab fa-weixin text-xl"></i>
+    </a>
+    <!-- 微博 -->
+    <a href="https://weibo.com" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition" title="微博">
+        <i class="fab fa-weibo text-xl"></i>
+    </a>
+    <!-- QQ -->
+    <a href="https://qq.com" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition" title="QQ">
+        <i class="fab fa-qq text-xl"></i>
+    </a>
+    <!-- 搜狐 (SVG小狐狸版) -->
+    <a href="https://sohu.com" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition" title="搜狐">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path d="M19.5 3.5L16 7.2C14.8 6.6 13.4 6.3 12 6.3C10.6 6.3 9.2 6.6 8 7.2L4.5 3.5L3.8 10.5C3.3 11.6 3 12.8 3 14.1C3 18.2 7 21.5 12 21.5C17 21.5 21 18.2 21 14.1C21 12.8 20.7 11.6 20.2 10.5L19.5 3.5ZM9.2 14.8C8.4 14.8 7.8 14.2 7.8 13.4C7.8 12.6 8.4 12 9.2 12C10 12 10.6 12.6 10.6 13.4C10.6 14.2 10 14.8 9.2 14.8ZM12 18.5L10.5 16.8H13.5L12 18.5ZM14.8 14.8C14 14.8 13.4 14.2 13.4 13.4C13.4 12.6 14 12 14.8 12C15.6 12 16.2 12.6 16.2 13.4C16.2 14.2 15.6 14.8 14.8 14.8Z"/>
+        </svg>
+    </a>
+    <!-- 小红书 (SVG书本图形版) -->
+    <a href="https://xiaohongshu.com" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition" title="小红书">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM9 4H11V11L10 10.25L9 11V4ZM16 17H8V15.5H16V17ZM16 14H8V12.5H16V14Z"/>
+        </svg>
+    </a>
+</div>
+
+
+
+<!-- 搜狐 (官方流线型狐狸尾巴 SVG 版) -->
+<a href="https://www.sohu.com/" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-opacity-80 transition" title="搜狐">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://w3.org">
+        <!-- 蓬松上扬的流线型“S”狐狸尾巴主体与尾尖分叉 -->
+        <path d="M18.8 3.2C16.2 2.2 12.6 2.8 10.2 5.2C7.8 7.6 8.2 10.6 10.6 12.2C12.8 13.7 13.2 15.8 11.4 17.5C9.6 19.2 6.4 19.3 4.2 18.1C5.8 20.5 9.6 21.6 13.4 20.4C17.2 19.2 19.4 15.8 18.2 12.6C17.2 10.1 14.5 9.1 13.6 7.4C12.9 6.1 14.1 4.6 16.2 4.6C17.4 4.6 18.4 5.1 19.2 5.8L20.5 3.8C19.9 3.5 19.4 3.3 18.8 3.2Z"/>
+        <!-- 狐狸尾尖的灵动细节高光点 -->
+        <path d="M17.5 3.6C18.9 3.6 20.1 4.3 20.8 5.4C19.8 5.2 18.7 5.3 17.8 5.8C17.1 5.1 16.9 4.2 17.5 3.6Z"/>
+    </svg>
+</a>
+
+
+
