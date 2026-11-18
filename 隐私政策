@@ -41,3 +41,25 @@
 
 
 
+
+<!-- 隐私政策弹窗 -->
+<div id="privacyModal" onclick="if(event.target===this)this.style.display='none'" style="display: none;" class="fixed inset-0 bg-black/60 z-50 justify-center items-center p-4">
+  <div class="bg-[#faf6f0] text-[#333] max-w-lg w-full rounded-xl p-6 max-h-[80vh] overflow-y-auto text-sm leading-relaxed shadow-2xl border border-[#E69500]/30">
+    <div class="flex justify-between items-center border-b border-black/10 pb-3 mb-4">
+      <h3 class="text-lg font-bold text-[#8c3b00] m-0">绝摆炒饭哥 · 隐私政策</h3>
+      <button onclick="document.getElementById('privacyModal').style.display='none'" class="text-gray-500 hover:text-black text-xl font-bold leading-none cursor-pointer">&times;</button>
+    </div>
+    
+    <div class="space-y-3 text-left">
+      <p><strong>更新日期：</strong>2026年11月</p>
+      <p><strong>绝摆哥（炒饭·南京菜）</strong>（地址：南京市秦淮区琵琶街与夫子庙步行街交叉口东20米）非常重视您的个人信息保护。在使用本网站服务时，请您了解以下内容：</p>
+      <p><strong>1. 信息收集与用途：</strong>所有信息仅用于为您预留餐位及到店前沟通，绝不用于商业推销或泄露给任何第三方。</p>
+      <p><strong>2. 第三方点餐与导航：</strong>当您扫描或识别本网站的“收钱吧点餐码”或点击地图导航按钮时，将跳转至微信、支付宝或地图服务商平台，相关数据受对应平台隐私协议保护。</p>
+      <p><strong>3. 联系我们：</strong>请随时致电门店热线：<strong>+86 888 8888 8888</strong>。</p>
+    </div>
+
+    <button onclick="document.getElementById('privacyModal').style.display='none'" class="mt-5 w-full py-2.5 bg-[#E69500] hover:bg-[#cc8400] text-white font-medium rounded-lg cursor-pointer transition">
+      我已阅读并知晓
+    </button>
+  </div>
+</div>
