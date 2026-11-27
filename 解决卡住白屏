@@ -88,4 +88,45 @@ Use code with caution.
 
 
 
+建议删除（或停止在首屏加载）。 这段代码正是 wow.min.js，它在代码中明确执行了 a.style.visibility = "hidden"，
+是导致你手机端打开白屏、且 LCP 渲染延迟超过 1.1 秒的直接原因之一。
 
+
+
+
+为什么删掉它能解决手机白屏？
+
+1. 强制隐藏元素：wow.js 启动后会立刻扫描网页里所有带有 class="wow" 的模块，把它们强行设为 visibility: hidden（隐藏），
+   然后通过 setInterval 定时器不断监听滚动位置，等动画延迟（data-wow-delay）结束才改回 visible。
+2. 手机端卡顿：在手机弱网或性能一般时，JS 脚本加载与执行会有延迟，加上 animate.min.css 本身被你改成了异步加载，
+   两者配合极易让首屏内容在几秒内处于隐藏白屏状态。
+
+
+
+
+
+最彻底且安全的删除步骤（两步搞定）：
+
+1. 在 index.html 中删掉 wow.min.js 的引用
+找到页面底部引入它的那一行并删除（顺便把 animate.min.css 也删掉）：
+
+<!-- 找到并删除这一行 -->
+<script src="js/wow.min.js"></script>
+
+
+
+2. 在 js/custom.js 中删掉启动它的代码
+打开 js/custom.js（否则删了文件后控制台会报 WOW is not defined 错误），找到类似下面这几行并整段删除：
+
+// 找到并删除这几行初始化代码
+new WOW({ mobile: false }).init();
+// 或者
+new WOW().init();
+
+
+
+删掉这两处后，不仅能彻底解决手机端因为动画隐藏导致的白屏，还能直接省去一个多余的 JS 文件请求，页面加载会更快。
+
+
+
+建议删除（或停止在首屏加载）。 你贴出的这段代码正是 wow.min.js，它在代码中明确执行了 a.style.visibility = "hidden"，是导致你手机端打开白屏、且 LCP 渲染延迟超过 1.1 秒的直接原因之一。
