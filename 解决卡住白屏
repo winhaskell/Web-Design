@@ -88,9 +88,20 @@ Use code with caution.
 
 
 
+CSS 文件
+这一整段（从 /* === preloader section === */ 开始，一直到最后的 @keyframes sk-circleBounceDelay 结束大括号 } 为止）全部删掉，
+然后只替换成下面这 4 行：
+
+/* 彻底隐藏全屏加载遮罩，消除首屏渲染延迟 */
+.preloader {
+    display: none !important;
+}
+
+
+
+
 建议删除（或停止在首屏加载）。 这段代码正是 wow.min.js，它在代码中明确执行了 a.style.visibility = "hidden"，
 是导致你手机端打开白屏、且 LCP 渲染延迟超过 1.1 秒的直接原因之一。
-
 
 
 
@@ -100,7 +111,6 @@ Use code with caution.
    然后通过 setInterval 定时器不断监听滚动位置，等动画延迟（data-wow-delay）结束才改回 visible。
 2. 手机端卡顿：在手机弱网或性能一般时，JS 脚本加载与执行会有延迟，加上 animate.min.css 本身被你改成了异步加载，
    两者配合极易让首屏内容在几秒内处于隐藏白屏状态。
-
 
 
 
@@ -127,6 +137,5 @@ new WOW().init();
 
 删掉这两处后，不仅能彻底解决手机端因为动画隐藏导致的白屏，还能直接省去一个多余的 JS 文件请求，页面加载会更快。
 
-
-
-建议删除（或停止在首屏加载）。 你贴出的这段代码正是 wow.min.js，它在代码中明确执行了 a.style.visibility = "hidden"，是导致你手机端打开白屏、且 LCP 渲染延迟超过 1.1 秒的直接原因之一。
+建议删除（或停止在首屏加载）。 你贴出的这段代码正是 wow.min.js，它在代码中明确执行了 a.style.visibility = "hidden"，
+是导致你手机端打开白屏、且 LCP 渲染延迟超过 1.1 秒的直接原因之一。
